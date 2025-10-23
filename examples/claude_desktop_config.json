@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "python",
+      "args": [
+        "/absolute/path/to/github_mcp.py"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "ghp_your_personal_access_token_here"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evaluation>
+  <qa_pair>
+    <question>Search for Python repositories related to machine learning that have more than 10,000 stars. What is the name and description of the repository with the most stars?</question>
+    <answer>tensorflow/tensorflow - An Open Source Machine Learning Framework for Everyone</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Look up the React repository owned by Facebook. What programming language is primarily used in this repository according to GitHub?</question>
+    <answer>JavaScript</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Find information about the GitHub user 'torvalds'. In what year was this account created?</question>
+    <answer>2011</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Search for repositories with the topic 'deep-learning' that are written in Python and have been updated in 2024. Sort by stars descending. What is the full name (owner/repo) of the top result?</question>
+    <answer>openai/gpt-2</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Get the repository information for 'microsoft/vscode'. How many open issues does this repository currently have (round to nearest thousand)?</question>
+    <answer>5000</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>List the contents of the root directory of the 'facebook/react' repository. Is there a file named 'LICENSE'?</question>
+    <answer>Yes</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Search for the user 'octocat' on GitHub. What type of account is this - User or Organization?</question>
+    <answer>User</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Look up the repository 'rust-lang/rust'. What is the default branch name for this repository?</question>
+    <answer>master</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Get information about the 'nodejs/node' repository. Is this repository a fork of another repository?</question>
+    <answer>No</answer>
+  </qa_pair>
+  
+  <qa_pair>
+    <question>Search for repositories related to 'kubernetes' with language Python, sorted by forks in descending order. What is the owner name of the repository with the most forks?</question>
+    <answer>kubernetes-client</answer>
+  </qa_pair>
+</evaluation>
