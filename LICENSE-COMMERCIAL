@@ -1,0 +1,268 @@
+COMMERCIAL LICENSE AGREEMENT
+
+GitHub MCP Server - Commercial License
+
+Copyright (C) 2025 MCP Labs
+https://mcplabs.co.uk
+
+---
+
+SUMMARY:
+
+This Commercial License allows you to use the GitHub MCP Server in proprietary 
+applications without the obligations of the AGPL v3 license (such as releasing 
+your source code).
+
+---
+
+GRANT OF LICENSE:
+
+Subject to the terms and conditions of this Agreement and payment of the 
+applicable license fee, MCP Labs grants you a non-exclusive, non-transferable 
+license to:
+
+1. Use the Software in commercial applications
+2. Modify the Software for your internal use
+3. Deploy the Software in production environments
+4. Integrate the Software with proprietary systems
+
+WITHOUT the requirement to:
+- Release your source code
+- Share modifications
+- Comply with AGPL v3 copyleft provisions
+
+---
+
+RESTRICTIONS:
+
+You may NOT:
+1. Redistribute the Software commercially
+2. Create competing products based on this Software
+3. Remove or modify license notices
+4. Sub-license the Software to third parties
+
+---
+
+PRICING TIERS:
+
+All prices in GBP (£) - USD and EUR accepted at current exchange rates
+
+1. STARTUP LICENSE - £399/year (approx. $499 USD)
+   - Up to 10 developers
+   - Up to 1 million API calls/month
+   - Email support (48hr response time)
+   - All future updates included
+   - 30-day money-back guarantee
+
+2. BUSINESS LICENSE - £1,599/year (approx. $1,999 USD)
+   - Up to 50 developers
+   - Unlimited API calls
+   - Priority email support (24hr response time)
+   - All future updates included
+   - Custom integration assistance (2 hours/month)
+   - Quarterly business reviews
+
+3. ENTERPRISE LICENSE - £3,999/year (approx. $4,999 USD)
+   - Unlimited developers
+   - Unlimited API calls
+   - Priority phone/video support (4hr critical response time)
+   - All future updates included
+   - Custom feature development (8 hours/quarter)
+   - SLA guarantees (99.9% availability)
+   - Private Slack channel access
+   - Dedicated account manager
+   - On-premise deployment support
+
+4. PERPETUAL LICENSE - Custom Pricing (Contact Us)
+   - One-time payment for lifetime usage rights
+   - All Enterprise features included
+   - 1 year of updates and support included
+   - Extended support contracts available
+   - Contact licensing@mcplabs.co.uk for quote
+
+---
+
+UK VAT:
+
+All prices exclude UK VAT (20%), which will be added for UK customers.
+VAT Number: [To be assigned upon VAT registration]
+
+---
+
+SUPPORT AND UPDATES:
+
+All licenses include:
+- Bug fixes and security patches
+- Performance improvements
+- New features and tools
+- Documentation updates
+- Version upgrades
+
+Support response times:
+- Startup: 48 hours (business days)
+- Business: 24 hours (business days)
+- Enterprise: 4 hours (24/7 for critical issues)
+
+---
+
+WARRANTY DISCLAIMER:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+TO THE MAXIMUM EXTENT PERMITTED BY ENGLISH LAW, MCP LABS DISCLAIMS ALL
+WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY.
+
+---
+
+LIMITATION OF LIABILITY:
+
+TO THE MAXIMUM EXTENT PERMITTED BY ENGLISH LAW, IN NO EVENT SHALL MCP LABS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID FOR THE LICENSE IN THE
+12 MONTHS PRECEDING THE CLAIM.
+
+---
+
+TERM AND TERMINATION:
+
+Annual licenses are valid for 12 months from purchase date and automatically
+renew unless cancelled with 30 days' written notice before renewal.
+
+License may be terminated if:
+- Payment is not received within 14 days of due date
+- Terms are violated
+- Software is misused or used beyond scope
+- Company enters administration or liquidation
+
+Upon termination, you must:
+- Cease all use of the Software
+- Delete all copies in your possession
+- Confirm destruction in writing within 7 days
+
+---
+
+PAYMENT TERMS:
+
+- Payment via Stripe, PayPal, or bank transfer (BACS/SWIFT)
+- Annual licenses billed annually in advance
+- Enterprise licenses can be invoiced quarterly upon request
+- Payment due within 14 days of invoice date
+- Late payment interest: 8% above Bank of England base rate
+- Currency: GBP (£) preferred, USD/EUR accepted
+- Refunds: 30-day money-back guarantee (first purchase only)
+
+Bank details provided upon invoice.
+
+---
+
+HOW TO PURCHASE:
+
+To obtain a commercial license:
+
+**Email:** licensing@mcplabs.co.uk
+**GitHub:** https://github.com/crypto-ninja/github-mcp-server/issues
+**Website:** https://mcplabs.co.uk (coming soon)
+
+Include in your inquiry:
+- Company name, registration number, and VAT number (if applicable)
+- Company size (number of developers)
+- Intended use case and deployment scale
+- Desired license tier
+- Billing address and contact information
+- Any special requirements or questions
+
+Response time: 24 hours for all inquiries
+
+---
+
+DATA PROTECTION:
+
+MCP Labs complies with UK GDPR and Data Protection Act 2018.
+
+Your data will be used only for:
+- License administration and support
+- Invoicing and payment processing
+- Product updates and security notifications
+
+We will not share your data with third parties except:
+- Payment processors (Stripe, PayPal)
+- As required by law
+
+Data retention: 7 years (HMRC requirement)
+
+Privacy Policy: https://mcplabs.co.uk/privacy (coming soon)
+
+---
+
+ENTIRE AGREEMENT:
+
+This Agreement constitutes the entire agreement between the parties and
+supersedes all prior agreements and understandings, whether written or oral.
+
+---
+
+GOVERNING LAW AND JURISDICTION:
+
+This Agreement shall be governed by and construed in accordance with the 
+laws of England and Wales.
+
+Any disputes arising from this Agreement shall be subject to the exclusive 
+jurisdiction of the courts of England and Wales.
+
+---
+
+ASSIGNMENT:
+
+You may not assign this license without prior written consent from MCP Labs.
+
+MCP Labs may assign this Agreement to any successor or acquirer of its business.
+
+---
+
+SEVERABILITY:
+
+If any provision of this Agreement is held to be unenforceable, the remaining
+provisions shall remain in full force and effect.
+
+---
+
+AMENDMENTS:
+
+MCP Labs may update these terms with 60 days' notice. Continued use after
+the notice period constitutes acceptance. Updates do not affect existing
+licenses unless both parties agree in writing.
+
+---
+
+ACCEPTANCE:
+
+By purchasing and using this Software under a Commercial License, you 
+acknowledge that you have read this Agreement, understand it, and agree 
+to be bound by its terms and conditions.
+
+---
+
+CONTACT INFORMATION:
+
+MCP Labs
+United Kingdom
+
+Email: licensing@mcplabs.co.uk
+Website: https://mcplabs.co.uk
+GitHub: https://github.com/crypto-ninja/github-mcp-server
+
+For licensing inquiries, support, or questions about this agreement,
+please contact us via the channels above.
+
+---
+
+Version 1.0
+Effective Date: [Current Date]
+Last Updated: [Current Date]
+
+© 2025 MCP Labs. All rights reserved.
