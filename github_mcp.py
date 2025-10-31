@@ -37,7 +37,7 @@ and more. It enables AI assistants to seamlessly integrate with GitHub workflows
 Features:
 - Repository management and exploration
 - Issue creation, search, and management
-- Pull request operations (list, create, detailed view)
+- Pull request operations (list, create, detailed view, merge)
 - GitHub Actions workflow monitoring
 - Advanced search (code and issues across GitHub)
 - File content retrieval
@@ -589,6 +589,22 @@ class ArchiveRepositoryInput(BaseModel):
     repo: str = Field(..., description="Repository name", min_length=1, max_length=100)
     archived: bool = Field(..., description="True to archive, False to unarchive")
     token: Optional[str] = Field(default=None, description="GitHub personal access token")
+
+class MergePullRequestInput(BaseModel):
+    """Input model for merging pull requests."""
+    model_config = ConfigDict(
+        str_strip_whitespace=True,
+        validate_assignment=True,
+        extra='forbid'
+    )
+    
+    owner: str = Field(..., description="Repository owner", min_length=1, max_length=100)
+    repo: str = Field(..., description="Repository name", min_length=1, max_length=100)
+    pull_number: int = Field(..., description="Pull request number", ge=1)
+    merge_method: Optional[str] = Field(default="squash", description="Merge method: 'merge', 'squash', or 'rebase'")
+    commit_title: Optional[str] = Field(default=None, description="Custom commit title for merge commit")
+    commit_message: Optional[str] = Field(default=None, description="Custom commit message for merge commit")
+    token: Optional[str] = Field(default=None, description="GitHub personal access token (optional - uses GITHUB_TOKEN env var if not provided)")
 
 # Phase 2.1: File Management Models
 
@@ -2953,6 +2969,94 @@ async def github_archive_repository(params: ArchiveRepositoryInput) -> str:
         )
         state = "archived" if data.get("archived") else "active"
         return f"✅ Repository state updated: {data['full_name']} is now {state}"
+    except Exception as e:
+        return _handle_api_error(e)
+
+
+@mcp.tool(
+    name="github_merge_pull_request",
+    annotations={
+        "title": "Merge Pull Request",
+        "readOnlyHint": False,
+        "destructiveHint": False,
+        "idempotentHint": False,
+        "openWorldHint": True
+    }
+)
+async def github_merge_pull_request(params: MergePullRequestInput) -> str:
+    """
+    Merge a pull request using the specified merge method.
+    
+    This tool merges an open pull request into its base branch. Supports
+    merge commits, squash merging, and rebase merging.
+    
+    Args:
+        params (MergePullRequestInput): Validated input parameters containing:
+            - owner (str): Repository owner
+            - repo (str): Repository name
+            - pull_number (int): Pull request number
+            - merge_method (Optional[str]): 'merge', 'squash', or 'rebase' (default: squash)
+            - commit_title (Optional[str]): Custom commit title
+            - commit_message (Optional[str]): Custom commit message
+            - token (Optional[str]): GitHub token
+    
+    Returns:
+        str: Merge confirmation with commit details
+    
+    Examples:
+        - Use when: "Merge PR #8"
+        - Use when: "Squash and merge this pull request"
+        - Use when: "Merge the feature branch"
+    
+    Error Handling:
+        - Returns error if PR not found (404)
+        - Returns error if not mergeable (405)
+        - Returns error if insufficient permissions (403)
+        - Returns error if conflicts exist (409)
+    """
+    try:
+        # Get token from env if not provided
+        token = params.token or os.environ.get("GITHUB_TOKEN")
+        
+        # Build merge data
+        merge_data = {
+            "merge_method": params.merge_method or "squash"
+        }
+        
+        if params.commit_title:
+            merge_data["commit_title"] = params.commit_title
+        if params.commit_message:
+            merge_data["commit_message"] = params.commit_message
+        
+        # Merge the pull request
+        result = await _make_github_request(
+            f"repos/{params.owner}/{params.repo}/pulls/{params.pull_number}/merge",
+            method="PUT",
+            token=token,
+            json=merge_data
+        )
+        
+        response = f"""✅ **Pull Request Merged Successfully!**
+
+
+📦 **Repository:** {params.owner}/{params.repo}
+🔀 **PR:** #{params.pull_number}
+✅ **Status:** {result.get('message', 'Merged')}
+
+
+**Merge Details:**
+
+- 📝 **Commit SHA:** {result.get('sha', 'N/A')}
+- 🔀 **Method:** {params.merge_method or 'squash'}
+- ✅ **Merged:** {result.get('merged', False)}
+
+
+The pull request has been successfully merged! 🎉
+
+"""
+        
+        return response
+        
     except Exception as e:
         return _handle_api_error(e)
 
