@@ -605,7 +605,6 @@ class MergePullRequestInput(BaseModel):
     commit_title: Optional[str] = Field(default=None, description="Custom commit title for merge commit")
     commit_message: Optional[str] = Field(default=None, description="Custom commit message for merge commit")
     token: Optional[str] = Field(default=None, description="GitHub personal access token (optional - uses GITHUB_TOKEN env var if not provided)")
-
 # Phase 2.1: File Management Models
 
 
@@ -2972,7 +2971,6 @@ async def github_archive_repository(params: ArchiveRepositoryInput) -> str:
     except Exception as e:
         return _handle_api_error(e)
 
-
 @mcp.tool(
     name="github_merge_pull_request",
     annotations={
@@ -3059,7 +3057,6 @@ The pull request has been successfully merged! 🎉
         
     except Exception as e:
         return _handle_api_error(e)
-
 # Entry point
 if __name__ == "__main__":
     mcp.run()
