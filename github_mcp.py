@@ -894,6 +894,8 @@ async def repo_read_file_chunk(params: ReadFileChunkInput) -> str:
         return _truncate_response(header + "```\n" + content + "\n```")
     except Exception as e:
         return _handle_api_error(e)
+
+@mcp.tool(
     name="github_get_repo_info",
     annotations={
         "title": "Get Repository Information",
